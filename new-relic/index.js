@@ -154,7 +154,7 @@ class NewRelicAgent {
     this.LOG.info(`New Relic Kepler agent version ${this.agentVersion}`);
 
     this.setAttribute('KeplerAgentVersion', this.agentVersion);
-    this.setAttribute('collector.name', 'newrelic-kepler-agent');
+    this.setAttribute('collector.name', 'firetv-vega-agent');
     this.setAttribute('instrumentation.provider', 'media');
     this.setAttribute('instrumentation.name', 'kepler');
     this.setAttribute('instrumentation.version', this.agentVersion);

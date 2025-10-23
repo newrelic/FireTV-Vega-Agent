@@ -26,7 +26,6 @@ let config = {
 };
 
 NewRelicAgent.startAgent("<ACCOUNT ID>", "<API KEY>", "<ENDPOINT>", config);
-
 LogBox.ignoreAllLogs();
 
 AppRegistry.registerComponent(appName, () => App);

@@ -1,6 +1,6 @@
 {
-  "name": "newrelic-kepler-agent",
-  "version": "0.8.1",
+  "name": "firetv-vega-agent",
+  "version": "0.0.1-beta",
   "description": "A New Relic Agent for Kepler",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",

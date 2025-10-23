@@ -4,76 +4,70 @@
  * PROPRIETARY/CONFIDENTIAL.  USE IS SUBJECT TO LICENSE TERMS.
  */
 
-import React, {useState} from 'react';
+import React from 'react';
 import {StyleSheet, Text, ImageBackground, View, Image} from 'react-native';
 import {Link} from './components/Link';
-import NewRelicAgent from 'newrelic-kepler-agent'
-
-const images = {
-  kepler: require('./assets/kepler.png'),
-  learn: require('./assets/learn.png'),
-  support: require('./assets/support.png'),
-  build: require('./assets/build.png'),
-};
+import NewRelicAgent from 'newrelic-kepler-agent';
 
 export const App = () => {
-  const [image, setImage] = useState(images.kepler);
-  let lastTime = 0;
 
   const styles = getStyles();
 
-  return(
-      <ImageBackground
+  return (
+    <ImageBackground
       source={require('./assets/background.png')}
       style={styles.background}>
-    <View style={styles.background}>
-      <Link
-            linkText={'Fetch'}
-            onPress={() => {
-              fetch("https://api.ipify.org?format=json")
-                .then((response) => response.json())
-                .then((data) => {
-                  console.log("ApiFy response = ", data);
-                })
-                .catch((error) => {
-                  console.log("ApiFy response error = ", error);
-                });
-            }}
-        />
-      <Link
-            linkText={'Fetch error'}
-            onPress={() => {
-              fetch("https://api.ipify-x.org?format=json")
-                .then((response) => response.json())
-                .then((data) => {
-                  console.log("ApiFy response = ", data);
-                })
-                .catch((error) => {
-                  console.log("ApiFy response error = ", error);
-                });
-            }}
-        />
-      <Link
-            linkText={'Throw JS error'}
-            onPress={() => {
-              new Promise((resolve, reject) => {
-                reject(new Error('Unhandled promise rejection!'))
+      <View style={styles.background}>
+        <Link
+          linkText={'Fetch'}
+          onPress={() => {
+            fetch('https://api.ipify.org?format=json')
+              .then((response) => response.json())
+              .then((data) => {
+                console.log('ApiFy response = ', data);
               })
-            }}
+              .catch((error) => {
+                console.log('ApiFy response error = ', error);
+              });
+          }}
         />
-      <Link
-            linkText={'Harvest Now'}
-            onPress={() => {
-              NewRelicAgent.harvestNow()
-            }}
+        <Link
+          linkText={'Fetch error'}
+          onPress={() => {
+            fetch('https://api.ipify-x.org?format=json')
+              .then((response) => response.json())
+              .then((data) => {
+                console.log('ApiFy response = ', data);
+              })
+              .catch((error) => {
+                console.log('ApiFy response error = ', error);
+              });
+          }}
         />
-      <Link
-            linkText={'Record custom event'}
-            onPress= {() => {
-              NewRelicAgent.recordCustomEvent("KeplerMyEvent", {"one": 1, "name": "Joe"});
-            }}
+        <Link
+          linkText={'Throw JS error'}
+          onPress={() => {
+            new Promise((resolve, reject) => {
+              reject(new Error('Unhandled promise rejection!'));
+            });
+          }}
         />
-    </View>
+        <Link
+          linkText={'Harvest Now'}
+          onPress={() => {
+            NewRelicAgent.harvestNow();
+          }}
+        />
+        <Link
+          linkText={'Record custom event'}
+          onPress={() => {
+            NewRelicAgent.recordCustomEvent('KeplerMyEvent', {
+              one: 1,
+              name: 'Joe',
+            });
+          }}
+        />
+      </View>
     </ImageBackground>
   );
 };
