@@ -1,6 +1,11 @@
 <!--[![Community Plus header](https://github.com/newrelic/opensource-website/raw/main/src/images/categories/Community_Plus.png)](https://opensource.newrelic.com/oss-category/#community-plus)-->
 
-# New Relic Kepler Agent
+# FireTV Vega Agent
+
+⚠️ **PRE-RELEASE SOFTWARE** ⚠️
+
+This is pre-release software subject to the New Relic Pre-Release Software Notice. 
+See [LICENSE](LICENSE) for full terms.
 
 New Relic agent for Amazon Kepler applications. Based on [New Relic React Native agent](https://github.com/newrelic/newrelic-react-native-agent/).
 
@@ -37,14 +42,14 @@ npm run build
 npm pack
 ```
 
-This will generate a file named `newrelic-kepler-agent-X.Y.Z.tgz`, where `X.Y.Z` is the current version of the Kepler agent.
+This will generate a file named `firetv-vega-agent-X.Y.Z.tgz`, where `X.Y.Z` is the current version of the FireTV Vega agent.
 
 ## Installation
 
 Add the following dependency to your `package.json` file:
 
 ```json
-"newrelic-kepler-agent": "file:path/to/newrelic-kepler-agent-X.Y.Z.tgz"
+"firetv-vega-agent": "file:path/to/firetv-vega-agent-X.Y.Z.tgz"
 ```
 
 Then run:
@@ -62,7 +67,7 @@ import { AppRegistry, LogBox } from 'react-native';
 import { App } from './src/App';
 import { name as appName } from './app.json';
 import * as appVersion from './package.json';
-import NewRelicAgent from 'newrelic-kepler-agent';
+import NewRelicAgent from 'firetv-vega-agent';
 
 /// Config keys (if not set, default value is true)
 let config = {
@@ -372,7 +377,7 @@ You can also generate a new app and configure by following the steps below.
     # agent and sample app are in same directory
     > ls
     sampleapp/
-    newrelic-kepler-agent/
+    firetv-vega-agent/
     ```
 
     ```javascript
@@ -396,12 +401,12 @@ You can also generate a new app and configure by following the steps below.
     const config = {
       resolver: {
         extraNodeModules: {
-          'newrelic-kepler-agent': path.resolve(__dirname, '../newrelic-kepler-agent')
+          'firetv-vega-agent': path.resolve(__dirname, '../firetv-vega-agent')
         },
-        blockList: exclusionList([/.*newrelic-kepler-agent\/examples\/.*/]),
+        blockList: exclusionList([/.*firetv-vega-agent\/examples\/.*/]),
       },
       watchFolders: [
-        path.resolve(__dirname, '../newrelic-kepler-agent'),
+        path.resolve(__dirname, '../firetv-vega-agent'),
       ],
       transformer: {
         getTransformOptions: async () => ({
@@ -416,12 +421,12 @@ You can also generate a new app and configure by following the steps below.
     module.exports = mergeConfig(getDefaultConfig(__dirname), config);
     ```
 
-4. Install/Link `newrelic-kepler-agent` dependency
+4. Install/Link `firetv-vega-agent` dependency
 
     From testing, it seems relative paths can be used in import statements:
 
     ```javascript
-    import NewRelicAgent from '../newrelic-kepler-agent';
+    import NewRelicAgent from '../firetv-vega-agent';
     ```
 
     However, it's recommended to install the app as a package using the local path:
@@ -431,7 +436,7 @@ You can also generate a new app and configure by following the steps below.
       "@amazon-devices/react-native-kepler": "~2.0.0",
       "react": "18.2.0",
       "react-native": "0.72.0",
-      "newrelic-kepler-agent": "file:../newrelic-kepler-agent"
+      "firetv-vega-agent": "file:../firetv-vega-agent"
     },
     ```
 
@@ -440,7 +445,7 @@ You can also generate a new app and configure by following the steps below.
     ```bash
     > ls
     sampleapp/
-    newrelic-kepler-agent/
+    firetv-vega-agent/
 
     > cd sampleapp
 
@@ -451,7 +456,7 @@ You can also generate a new app and configure by following the steps below.
     After this, imports can simply reference the agent package:
 
     ```javascript
-    import NewRelicAgent from 'newrelic-kepler-agent';
+    import NewRelicAgent from 'firetv-vega-agent';
 
     ...
 
@@ -469,9 +474,9 @@ You can also generate a new app and configure by following the steps below.
     ```bash
     > ls
     sampleapp/
-    newrelic-kepler-agent
+    firetv-vega-agent
 
-    > cd newrelic-kepler-agent
+    > cd firetv-vega-agent
 
     # Run in dev mode
     > npm run dev
@@ -512,6 +517,9 @@ For more information, review New Relic’s General Data Privacy Notice.
 
 ## License
 
-New Relic Kepler agent is licensed under the New Relic Pre-Release Software Notice.
+FireTV Vega Agent is licensed under the New Relic Pre-Release Software Notice v. 1.0 - see the [LICENSE](LICENSE) file for details.
+
+**Important Notice:**
+- This is pre-release software for evaluation and feedback purposes only
 
 It also uses source code from third-party libraries. You can find full details on which libraries are used and the terms under which they are licensed in the [third-party notices document](./THIRD_PARTY_NOTICES.md).

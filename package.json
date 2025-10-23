@@ -48,7 +48,7 @@
     "kepler"
   ],
   "author": "New Relic",
-  "license": "Apache-2.0",
+  "license": "SEE LICENSE IN LICENSE",
   "homepage": "https://github.com/newrelic-experimental/newrelic-kepler-agent",
   "dependencies": {
     "@amazon-devices/react-native-device-info": "^2.0.0",

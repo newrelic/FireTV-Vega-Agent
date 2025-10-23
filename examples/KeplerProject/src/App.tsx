@@ -7,7 +7,7 @@
 import React from 'react';
 import {StyleSheet, Text, ImageBackground, View, Image} from 'react-native';
 import {Link} from './components/Link';
-import NewRelicAgent from 'newrelic-kepler-agent';
+import NewRelicAgent from 'firetv-vega-agent';
 
 export const App = () => {
 
