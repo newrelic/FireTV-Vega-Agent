@@ -17,11 +17,8 @@ New Relic agent for Amazon Kepler applications. Based on [New Relic React Native
 * App navigation tracking, using breadcrumbs.
 * Record custom events and attributes.
 * Record custom breadcrumbs.
-* Record custom errors.
 * Record custom logs.
 * Record custom metrics.
-* Video player tracking (using [video trackers](#video-tracking)).
-* Track console logs, warns, and errors, via NR logs.
 
 Not Yet Implemented:
 
@@ -29,7 +26,7 @@ Not Yet Implemented:
 
 ## Requirements
 
-* Kepler SDK v0.7+
+* Kepler SDK v0.21+
 * React Native v0.72.0+
 
 ## Build
@@ -79,9 +76,6 @@ let config = {
 
   // Capture HTTP requests
   recordFetchResults: true,
-
-  // Capture console logs
-  recordConsoleLogs: true,
 };
 
 // Set Account ID, API Key and Endpoint (either "US" or "EU").
@@ -94,13 +88,6 @@ NewRelicAgent.setAppName(appName);
 LogBox.ignoreAllLogs();
 AppRegistry.registerComponent(appName, () => App);
 ```
-
-## Crash Reporting
-
-> [!CAUTION]
-> The native crash reporting module is not currently available for pre-release. Check back or contact us via one of the [support](#support) options for more information.
-
-Native crash reporting is supported by a [separate module](https://github.com/newrelic-experimental/newrelic-kepler-crash-turbomodule). If you are interested in having native crash reports, please check the installation and setup instructions.
 
 ## SDK Usage
 
@@ -128,27 +115,6 @@ Our public Kepler SDK API methods let you collect custom data, configure default
 > Creates and records a KeplerBreadcrumb event. Used to track app activity/screen that may be helpful for troubleshooting crashes.
   ```js
   NewRelicAgent.recordBreadcrumb("MyEvent", {"attr": "value"});
-  ```
-### recordLog(message: string, attributes?: {[key: string]: any}): void;
-> Creates and records a Log.
-  ```js
-  NewRelicAgent.recordLog("log message", {"attr": "value"});
-  ```
-### recordGaugeMetric(name: string, value: number, attributes?: {[key: string]: any}): void
-> Record a gauge metric. Represents a value that can increase or decrease with time.
-  ```js
-  NewRelicAgent.recordMetric('CustomMetricName', 11.1, {"attr": "value"});
-  ```
-### recordCountMetric(name: string, value: number, interval: number, attributes?: {[key: string]: any}): void
-> Record a count metric. Measures the number of occurrences of an event during a time interval.
-  ```js
-  NewRelicAgent.recordMetric('CustomMetricName', 250, 1500, {"attr": "value"});
-  ```
-
-### recordSummaryMetric(name: string, count: number, max: number, min: number, sum: number, interval: number, attributes?: {[key: string]: any}): void
-> Record a summary metric. Used to report pre-aggregated data, or information on aggregated discrete events.
-  ```js
-  NewRelicAgent.recordMetric('CustomMetricName', 2000, 5, 1000, 100, 200, {"attr": "value"});
   ```
 
 ### recordError(e: string|error): void;
@@ -229,22 +195,6 @@ SELECT keyset() from KeplerSystem SINCE 24 HOURS AGO
 
 We will document these in a future release.
 
-### Kepler Video
-
-This event groups all actions related to video tracking.
-
-```sql
-SELECT * from KeplerVideo SINCE 24 HOURS AGO
-```
-
-To see a list of all keys, use the keyset() function:
-
-```sql
-SELECT keyset() from KeplerVideo SINCE 24 HOURS AGO
-```
-
-We will document these in a future release.
-
 ### KeplerError
 
 This event groups all actions related to error tracking.
@@ -275,50 +225,13 @@ SELECT keyset() from KeplerBreadcrumb SINCE 24 HOURS AGO
 
 We will document these in a future release.
 
-## Video tracking
-
-Kepler uses the W3C Media standard for the video player interface, that can be tracked using the New Relic's [HTML5 Video Tracker](https://github.com/newrelic/video-html5-js).
-
-### Video tracker install
-
-Add the following dependency to your `package.json` file:
-
-```json
-"newrelic-video-html5": "git+https://github.com/newrelic/video-html5-js.git"
-```
-
-Then run:
-
-```bash
-npm install
-```
-
-### Video tracker setup
-
-Open the `.tsx` file where you defined your video player and add:
-
-```js
-// @ts-ignore
-import * as nrvideo from 'newrelic-video-html5'
-```
-
-Then find the line where you created the `VideoPlayer` and build the video tracker immediately after:
-
-```js
-// video player created here
-video.current = new VideoPlayer();
-
-// Build newrelic video tracker
-nrvideo.Core.addTracker(new nrvideo.Html5Tracker(video.current));
-```
-
 ## Development
 
 Running the agent alongside a Kepler app is helpful for a quicker feedback loop. You can use the example app we've provided in the repo, or generate a new Kepler app and reference the agent (i) from source (ii) as a npm package.
 
 ### Example App
 
-The `examples` folder contains sample applications that can be built just like any Kepler app. The [Sample app](./examples/sampleapp) is pre-configured to work with the agent source code. The steps are outlined below.
+The `examples` folder contains sample applications that can be built just like any Kepler app. The [Sample app](./examples/KeplerProject) is pre-configured to work with the agent source code. The steps are outlined below.
 
 1. Install deps and run the agent in dev mode
 
@@ -336,7 +249,7 @@ The `examples` folder contains sample applications that can be built just like a
 
     ```bash
     # Navigate to sample app
-    > cd examples/sampleapp
+    > cd examples/KeplerProject
 
     # Install deps
     > npm install
@@ -376,7 +289,7 @@ You can also generate a new app and configure by following the steps below.
     ```bash
     # agent and sample app are in same directory
     > ls
-    sampleapp/
+   KeplerProject/
     firetv-vega-agent/
     ```
 
