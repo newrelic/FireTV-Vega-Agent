@@ -1,0 +1,56 @@
+{
+  "include": ["new-relic/**/*"],
+  "exclude": ["node_modules", "examples", "**/__tests__/**/*"],
+  "compilerOptions": {
+    /* Language and Environment */
+    "target": "ES2022",
+    "lib": ["ES2022"],
+    // Enable experimental support for legacy experimental decorators.
+    "experimentalDecorators": true,
+    // Emit design-type metadata for decorated declarations in source files.
+    "emitDecoratorMetadata": true,
+
+    /* Modules */
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "typeRoots": ["node_modules/@types"],
+    // "types": ["react-native"],
+    "resolveJsonModule": false,
+
+    /* JavaScript Support */
+    // Tells TypeScript to read JS files, as
+    // normally they are ignored as source files
+    "allowJs": true,
+
+    /* Emit */
+    // Generate d.ts files
+    "declaration": true,
+    // go to js file when using IDE functions like
+    // "Go to Definition" in VSCode
+    "declarationMap": true,
+
+    // Types should go into this directory.
+    // Removing this would place the .d.ts files
+    // next to the .js files
+    "outDir": "dist",
+
+    /* Interop Constraints */
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+
+    /* Type Checking */
+    // Enable all strict type-checking options.
+    // Have errors when trying to enable strict,
+    // so not using for now
+    // "strict": true,
+    "noImplicitAny": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+
+    /* Completeness */
+    "skipLibCheck": true
+  }
+}
