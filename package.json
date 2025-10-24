@@ -1,7 +1,7 @@
 {
   "name": "firetv-vega-agent",
   "version": "0.0.1-beta",
-  "description": "A New Relic Agent for Kepler",
+  "description": "A New Relic Agent for Amazon Kepler applications (Beta)",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
@@ -21,7 +21,7 @@
   },
   "files": [
     "dist",
-    "LICENSE",
+    "LICENSE.txt",
     "README.md",
     "CHANGELOG.md",
     "THIRD_PARTY_NOTICES.md"
@@ -45,10 +45,14 @@
   },
   "keywords": [
     "new relic",
-    "kepler"
+    "kepler",
+    "firetv",
+    "monitoring",
+    "analytics",
+    "beta"
   ],
   "author": "New Relic",
-  "license": "SEE LICENSE IN LICENSE",
+  "license": "Apache-2.0",
   "homepage": "https://github.com/newrelic-experimental/newrelic-kepler-agent",
   "dependencies": {
     "@amazon-devices/react-native-device-info": "^2.0.0",

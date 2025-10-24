@@ -2,10 +2,11 @@
 
 # FireTV Vega Agent
 
-⚠️ **PRE-RELEASE SOFTWARE** ⚠️
+� **BETA RELEASE** �
 
-This is pre-release software subject to the New Relic Pre-Release Software Notice. 
-See [LICENSE](LICENSE) for full terms.
+This is a beta version of the New Relic agent for Amazon Kepler applications. 
+While functional and ready for testing, this software is not yet recommended for production use. 
+Please report issues and provide feedback to help us improve the stability and feature set.
 
 New Relic agent for Amazon Kepler applications. Based on [New Relic React Native agent](https://github.com/newrelic/newrelic-react-native-agent/).
 
@@ -17,8 +18,6 @@ New Relic agent for Amazon Kepler applications. Based on [New Relic React Native
 * App navigation tracking, using breadcrumbs.
 * Record custom events and attributes.
 * Record custom breadcrumbs.
-* Record custom logs.
-* Record custom metrics.
 
 Not Yet Implemented:
 
@@ -430,9 +429,13 @@ For more information, review New Relic’s General Data Privacy Notice.
 
 ## License
 
-FireTV Vega Agent is licensed under the New Relic Pre-Release Software Notice v. 1.0 - see the [LICENSE](LICENSE) file for details.
+FireTV Vega Agent is licensed under the Apache License 2.0 - see the [LICENSE.txt](LICENSE.txt) file for details.
 
-**Important Notice:**
-- This is pre-release software for evaluation and feedback purposes only
+**Beta Release Notice:**
+- This is a beta release suitable for testing and evaluation
+- While functional, it is not yet recommended for production environments
+- APIs may change in future versions based on feedback
+- Please report issues and provide feedback via GitHub issues
+- Contributions and pull requests are welcome
 
 It also uses source code from third-party libraries. You can find full details on which libraries are used and the terms under which they are licensed in the [third-party notices document](./THIRD_PARTY_NOTICES.md).
