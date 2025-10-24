@@ -225,7 +225,7 @@ The app will open a simple interface in QEMU that can be used to simulate comman
 
 ## Support
 
-For general help and support, please contact <cmccarthy@newrelic.com>
+For general help and support, please contact New Relic Account Team.
 
 ## Privacy
 
