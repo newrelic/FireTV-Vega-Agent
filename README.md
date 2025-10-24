@@ -4,28 +4,22 @@
 
 � **BETA RELEASE** �
 
-This is a beta version of the New Relic agent for Amazon Kepler applications. 
+This is a beta version of the New Relic agent for applications running on Vega. 
 While functional and ready for testing, this software is not yet recommended for production use. 
 Please report issues and provide feedback to help us improve the stability and feature set.
 
-New Relic agent for Amazon Kepler applications. Based on [New Relic React Native agent](https://github.com/newrelic/newrelic-react-native-agent/).
+New Relic agent for applications running on Vega. Based on [New Relic React Native agent](https://github.com/newrelic/newrelic-react-native-agent/).
 
 ## Features
 
 * Capture JavaScript errors.
 * Track HTTP requests, responses and errors.
 * Promise rejection tracking.
-* App navigation tracking, using breadcrumbs.
 * Record custom events and attributes.
-* Record custom breadcrumbs.
-
-Not Yet Implemented:
-
-* Distributed tracing.
 
 ## Requirements
 
-* Kepler SDK v0.21+
+* Vega SDK v0.21+
 * React Native v0.72.0+
 
 ## Build
@@ -63,7 +57,7 @@ import { AppRegistry, LogBox } from 'react-native';
 import { App } from './src/App';
 import { name as appName } from './app.json';
 import * as appVersion from './package.json';
-import NewRelicAgent from 'firetv-vega-agent';
+import NewRelicVegaAgent from 'newrelic-vega-agent';
 
 /// Config keys (if not set, default value is true)
 let config = {
@@ -78,11 +72,11 @@ let config = {
 };
 
 // Set Account ID, API Key and Endpoint (either "US" or "EU").
-NewRelicAgent.startAgent("<ACCOUNT ID>", "<API KEY>", "<ENDPOINT>", config);
+NewRelicVegaAgent.startAgent("<ACCOUNT ID>", "<API KEY>", "<ENDPOINT>", config);
 
 // Optional:
-NewRelicAgent.setAppVersion(appVersion.version);
-NewRelicAgent.setAppName(appName);
+NewRelicVegaAgent.setAppVersion(appVersion.version);
+NewRelicVegaAgent.setAppName(appName);
 
 LogBox.ignoreAllLogs();
 AppRegistry.registerComponent(appName, () => App);
@@ -90,30 +84,18 @@ AppRegistry.registerComponent(appName, () => App);
 
 ## SDK Usage
 
-Our public Kepler SDK API methods let you collect custom data, configure default settings, and more.
+Our public Vega SDK API methods let you collect custom data, configure default settings, and more.
 
 ### recordCustomEvent(eventType: string, attributes?: {[key: string]: any}): void;
 > Creates and records a custom event for use in New Relic Insights.
   ```js
-  NewRelicAgent.recordCustomEvent("mobileClothes", {"pantsColor": "blue","pantssize": 32,"belt": true});
-  ```
-
-### recordSystemEvent(attributes?: {[key: string]: any}): void;
-> Creates and records a KeplerSystem event for use in New Relic Insights.
-  ```js
-  NewRelicAgent.recordSystemEvent({"pantsColor": "blue","pantssize": 32,"belt": true});
+  NewRelicVegaAgent.recordCustomEvent("mobileClothes", {"pantsColor": "blue","pantssize": 32,"belt": true});
   ```
 
 ### recordCustomError(error: Error, attributes?: {[key: string]: any}): void;
 > Creates and records a custom error event for use in New Relic Insights.
   ```js
-  NewRelicAgent.recordCustomError({message:"error message", name: "CustomError"});
-  ```
-
-### recordBreadcrumb(eventName: string, attributes?: {[key: string]: any}): void;
-> Creates and records a KeplerBreadcrumb event. Used to track app activity/screen that may be helpful for troubleshooting crashes.
-  ```js
-  NewRelicAgent.recordBreadcrumb("MyEvent", {"attr": "value"});
+  NewRelicVegaAgent.recordCustomError({message:"error message", name: "CustomError"});
   ```
 
 ### recordError(e: string|error): void;
@@ -133,100 +115,84 @@ Our public Kepler SDK API methods let you collect custom data, configure default
     var foo = {};
     foo.bar();
   } catch(e) {
-    NewRelicAgent.recordError(e, true);
+    NewRelicVegaAgent.recordError(e, true);
   }
   ```
 
 ### setMaxEventBufferTime(maxBufferTimeInSeconds: number): void;
 > Sets the event harvest cycle length. Default is 600 seconds (10 minutes). Minimum value can not be less than 60 seconds. Maximum value should not be greater than 600 seconds.
   ```js
-  NewRelicAgent.setMaxEventBufferTime(60);
+  NewRelicVegaAgent.setMaxEventBufferTime(60);
   ```
 
 ### setAttribute(attributeName: string, value: boolean | number | string): void;
 > Creates a custom attribute with a specified name and value. Overwrites its previous value and type each time it is called.
   ```js
-  NewRelicAgent.setAttribute('CustomAttrNumber', 37);
+  NewRelicVegaAgent.setAttribute('CustomAttrNumber', 37);
   ```
 ### removeAttribute(name: string): void;
 > Remove a custom attribute with a specified name and value.
   ```js
-  NewRelicAgent.removeAttribute('CustomAttrNumber');
+  NewRelicVegaAgent.removeAttribute('CustomAttrNumber');
   ```
 ### removeAllAttributes(): void;
 > Removes all attributes from the session.
   ```js
-  NewRelicAgent.removeAllAttributes();
+  NewRelicVegaAgent.removeAllAttributes();
   ```
 ### setAppVersion(version: string): void;
 > Set the app version.
   ```js
-  NewRelicAgent.setAppVersion('v1.0.0');
+  NewRelicVegaAgent.setAppVersion('v1.0.0');
   ```
 ### setAppName(name: string): void;
 > Set the app name.
   ```js
-  NewRelicAgent.setAppName('NR-test');
+  NewRelicVegaAgent.setAppName('NR-test');
   ```
 ### setUserId(userId: string): void;
 > Set a custom user identifier value to associate user sessions with analytics events and attributes.
   ```js
-  NewRelicAgent.setUserId("RN12934");
+  NewRelicVegaAgent.setUserId("RN12934");
   ```
 
 ## Data model
 
-The Kepler Agent reports the following Custom Event Types out of the box.
+The Newrelic Vega agent reports the following Custom Event Types out of the box.
 
-### KeplerSystem
+### VegaSystem
 
 This event groups all actions related to system/device tracking.
 
 ```sql
-SELECT * from KeplerSystem SINCE 24 HOURS AGO
+SELECT * from VegaSystem SINCE 24 HOURS AGO
 ```
 
 To see a list of all keys, use the keyset() function:
 
 ```sql
-SELECT keyset() from KeplerSystem SINCE 24 HOURS AGO
+SELECT keyset() from VegaSystem SINCE 24 HOURS AGO
 ```
 
 We will document these in a future release.
 
-### KeplerError
+### VegaError
 
 This event groups all actions related to error tracking.
 
 ```sql
-SELECT * from KeplerError SINCE 24 HOURS AGO
+SELECT * from VegaError SINCE 24 HOURS AGO
 ```
 
 To see a list of all keys, use the keyset() function:
 
-SELECT keyset() from KeplerError SINCE 24 HOURS AGO
-
-We will document these in a future release.
-
-### KeplerBreadcrumb
-
-This event groups all actions related to navigation event tracking.
-
-```sql
-SELECT * from KeplerBreadcrumb SINCE 24 HOURS AGO
-```
-
-To see a list of all keys, use the keyset() function:
-
-```sql
-SELECT keyset() from KeplerBreadcrumb SINCE 24 HOURS AGO
-```
+SELECT keyset() from VegaError SINCE 24 HOURS AGO
 
 We will document these in a future release.
 
 ## Development
 
-Running the agent alongside a Kepler app is helpful for a quicker feedback loop. You can use the example app we've provided in the repo, or generate a new Kepler app and reference the agent (i) from source (ii) as a npm package.
+Running the agent alongside a Vega app is helpful for a quicker feedback loop. You can use the example app we've provided in the repo, or generate a new Vega app.
 
 ### Example App
 
@@ -237,9 +203,6 @@ The `examples` folder contains sample applications that can be built just like a
     ```bash
     # install deps
     > npm install
-
-    # Run in dev mode (this will run the build and then run tsc in watch mode for continuous compilation)
-    > npm run dev
     ```
 
 2. The agent setup from [Setup](#setup) has been added. However, you need to add `ACCOUNT_ID`, `LICENSE_KEY`, and `ENDPOINT` params to the `startAgent(...)` function.
@@ -257,13 +220,7 @@ The `examples` folder contains sample applications that can be built just like a
     > kepler device simulator start
 
     # Build and run app (command provided is for M1 architecture)
-    > kepler build -b Debug -t sim_tv_aarch64 && kepler run-kepler build/vega-tv2023-aarch64-debug/sampleapp_aarch64.vpkg com.newrelic.sampleapp.main -s
-
-    # Open shell to the simulator
-    > kepler device shell -d Simulator
-
-    # see logs in the simulator terminal:
-    > journalctl --follow --since now --identifier keplerscript-ru
+    > kepler build -b Debug -t sim_tv_aarch64 && kepler run-kepler build/aarch64-release/keplerproject_aarch64.vpkg com.amazondeveloper.keplerproject.main -s
 
     # Finally, stop the app
     > kepler device simulator stop
@@ -271,153 +228,10 @@ The `examples` folder contains sample applications that can be built just like a
 
 The app will open a simple interface in QEMU that can be used to simulate commands to the agent SDK.
 
-### Generate Kepler App
-
-You can also generate a new app and configure by following the steps below.
-
-1. Download the Kepler SDK tools from Amazon
-2. Generate a new Kepler app
-
-    ```bash
-    # Generate Kepler App
-    > kepler project generate --template ksAppV0.72 --name sampleapp --packageId com.newrelic.sampleapp
-    ```
-
-3. Modify the metro config to reference the agent repo with `extraNodeModules` and `watchFolders`. The paths below assume the agent codebase and sample app are in the same directory:
-
-    ```bash
-    # agent and sample app are in same directory
-    > ls
-   KeplerProject/
-    firetv-vega-agent/
-    ```
-
-    ```javascript
-    // metro.config.js
-    /*
-    * Copyright (c) 2022 Amazon.com, Inc. or its affiliates.  All rights reserved.
-    *
-    * PROPRIETARY/CONFIDENTIAL.  USE IS SUBJECT TO LICENSE TERMS.
-    */
-    const path = require('path');
-
-    const {getDefaultConfig, mergeConfig} = require('@react-native/metro-config');
-    const exclusionList = require('metro-config/src/defaults/exclusionList');
-
-    /**
-    + * Metro configuration
-    + * https://facebook.github.io/metro/docs/configuration
-      *
-    + * @type {import('metro-config').MetroConfig}
-      */
-    const config = {
-      resolver: {
-        extraNodeModules: {
-          'firetv-vega-agent': path.resolve(__dirname, '../firetv-vega-agent')
-        },
-        blockList: exclusionList([/.*firetv-vega-agent\/examples\/.*/]),
-      },
-      watchFolders: [
-        path.resolve(__dirname, '../firetv-vega-agent'),
-      ],
-      transformer: {
-        getTransformOptions: async () => ({
-          transform: {
-            experimentalImportSupport: false,
-            inlineRequires: true,
-          },
-        }),
-      },
-    };
-
-    module.exports = mergeConfig(getDefaultConfig(__dirname), config);
-    ```
-
-4. Install/Link `firetv-vega-agent` dependency
-
-    From testing, it seems relative paths can be used in import statements:
-
-    ```javascript
-    import NewRelicAgent from '../firetv-vega-agent';
-    ```
-
-    However, it's recommended to install the app as a package using the local path:
-
-    ```json
-    "dependencies": {
-      "@amazon-devices/react-native-kepler": "~2.0.0",
-      "react": "18.2.0",
-      "react-native": "0.72.0",
-      "firetv-vega-agent": "file:../firetv-vega-agent"
-    },
-    ```
-
-    Then, run:
-
-    ```bash
-    > ls
-    sampleapp/
-    firetv-vega-agent/
-
-    > cd sampleapp
-
-    # install deps
-    > npm install
-    ```
-
-    After this, imports can simply reference the agent package:
-
-    ```javascript
-    import NewRelicAgent from 'firetv-vega-agent';
-
-    ...
-
-    NewRelicAgent.setAppName("appName");
-    ```
-
-    > Note: It's possible `npm link` would suffice here as well, it just hasn't been tested yet.
-
-5. Follow the [Setup](#setup) steps above to add the `NewRelicAgent` config to the index.js file of the Kepler app.
-
-    > Note: Remember to add `ACCOUNT_ID`, `LICENSE_KEY`, and `ENDPOINT` params to the `startAgent(...)` function.
-
-6. Run the agent in dev mode
-
-    ```bash
-    > ls
-    sampleapp/
-    firetv-vega-agent
-
-    > cd firetv-vega-agent
-
-    # Run in dev mode
-    > npm run dev
-    ```
-
-7. Build and deploy the Kepler app to the Simulator
-
-    ```bash
-    # Start Simulator
-    > kepler device simulator start
-
-    # Build and run app (command provided is for M1 architecture)
-    > kepler build -b Debug -t sim_tv_aarch64 && kepler run-kepler build/vega-tv2023-aarch64-debug/sampleapp_aarch64.vpkg com.newrelic.sampleapp.main -s
-
-    # Open shell to the simulator
-    > kepler device shell -d Simulator
-
-    # see logs in the simulator terminal:
-    > journalctl --follow --since now --identifier keplerscript-ru
-
-    # Finally, stop the app
-    > kepler device simulator stop
-    ```
 
 ## Support
 
 For general help and support, please contact <cmccarthy@newrelic.com>
-
-To file an issue and/or feature request, please contact <labs@newrelic.com>
 
 ## Privacy
 
@@ -427,13 +241,12 @@ We define “Personal Data” as any information relating to an identified or id
 
 For more information, review New Relic’s General Data Privacy Notice.
 
-## License
+## License.
 
-FireTV Vega Agent is licensed under the Apache License 2.0 - see the [LICENSE.txt](LICENSE.txt) file for details.
+FireTV Vega Agent is licensed under the [New Relic Pre-release policy](https://docs.newrelic.com/docs/licenses/license-information/referenced-policies/new-relic-pre-release-policy/).
 
 **Beta Release Notice:**
 - This is a beta release suitable for testing and evaluation
-- While functional, it is not yet recommended for production environments
 - APIs may change in future versions based on feedback
 - Please report issues and provide feedback via GitHub issues
 - Contributions and pull requests are welcome

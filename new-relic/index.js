@@ -150,13 +150,13 @@ class NewRelicAgent {
       this.overrideFetch();
     }
 
-    this.LOG.info('Kepler agent started.');
-    this.LOG.info(`New Relic Kepler agent version ${this.agentVersion}`);
+    this.LOG.info('Vega agent started.');
+    this.LOG.info(`New Relic Vega agent version ${this.agentVersion}`);
 
-    this.setAttribute('KeplerAgentVersion', this.agentVersion);
-    this.setAttribute('collector.name', 'firetv-vega-agent');
+    this.setAttribute('VegaAgentVersion', this.agentVersion);
+    this.setAttribute('collector.name', 'newrelic-vega-agent');
     this.setAttribute('instrumentation.provider', 'media');
-    this.setAttribute('instrumentation.name', 'kepler');
+    this.setAttribute('instrumentation.name', 'vega');
     this.setAttribute('instrumentation.version', this.agentVersion);
     this.setAttribute('JSEngine', global.HermesInternal ? "Hermes" : "JavaScriptCore");
     
@@ -168,7 +168,7 @@ class NewRelicAgent {
     return `${rnVersion.major}.${rnVersion.minor}.${rnVersion.patch}`
   }
 
-  //TODO: implement session ID, check kepler app lifecycle:
+  //TODO: implement session ID, check Vega app lifecycle:
   //  - Build a new id when the app starts.
   //  - Build a new id when the app comes from background.
 
@@ -202,7 +202,7 @@ class NewRelicAgent {
   }
 
   /**
-   * Creates and records a KeplerSystem event.
+   * Creates and records a VegaSystem event.
    * The event may include a list of attributes, specified as a map.
    * @param {Record<string, any>} [attributes] (optional) A map that includes a list of attributes.
    */

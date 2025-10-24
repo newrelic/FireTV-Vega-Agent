@@ -3,7 +3,7 @@ import { BREADCRUMB_EVENT_TYPE, ERROR_EVENT_TYPE, SYSTEM_EVENT_TYPE } from './ha
 import { NrEndpoint } from './harvest/worker'
 import { ValidVal } from './types'
 
-/** New Relic Kepler Agent */
+/** New Relic Vega Agent */
 export class NrAgent {
     private nrHarvest: NrHarvest
     private agentSession: string

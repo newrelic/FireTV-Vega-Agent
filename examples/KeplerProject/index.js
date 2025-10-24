@@ -7,7 +7,7 @@
 import { AppRegistry, LogBox } from 'react-native';
 import { App } from './src/App';
 import { name as appName } from './app.json';
-import NewRelicAgent from 'firetv-vega-agent';
+import NewRelicVegaAgent from 'newrelic-vega-agent';
 
 // Temporary workaround for problem with nested text
 // not working currently.
@@ -20,12 +20,10 @@ let config = {
 
   // Capture HTTP requests
   recordFetchResults: true,
-
-  // Capture console logs
-  recordConsoleLogs: true,
 };
 
-NewRelicAgent.startAgent("<ACCOUNT ID>", "<API KEY>", "<ENDPOINT>", config);
+NewRelicVegaAgent.startAgent("<ACCOUNT ID>", "<API KEY>", "<ENDPOINT>", config);
+
 LogBox.ignoreAllLogs();
 
 AppRegistry.registerComponent(appName, () => App);
