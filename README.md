@@ -2,8 +2,6 @@
 
 # FireTV Vega Agent
 
-� **BETA RELEASE** �
-
 🚀 **BETA RELEASE** 🚀
 
 This is a beta release of the New Relic agent for Vega applications, suitable for testing and evaluation. Please report issues and provide feedback to help us improve the stability and feature set.
