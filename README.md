@@ -4,9 +4,9 @@
 
 � **BETA RELEASE** �
 
-This is a beta version of the New Relic agent for applications running on Vega. 
-While functional and ready for testing, this software is not yet recommended for production use. 
-Please report issues and provide feedback to help us improve the stability and feature set.
+🚀 **BETA RELEASE** 🚀
+
+This is a beta release of the New Relic agent for Vega applications, suitable for testing and evaluation. Please report issues and provide feedback to help us improve the stability and feature set.
 
 New Relic agent for applications running on Vega. Based on [New Relic React Native agent](https://github.com/newrelic/newrelic-react-native-agent/).
 
@@ -174,8 +174,6 @@ To see a list of all keys, use the keyset() function:
 SELECT keyset() from VegaSystem SINCE 24 HOURS AGO
 ```
 
-We will document these in a future release.
-
 ### VegaError
 
 This event groups all actions related to error tracking.
@@ -188,15 +186,13 @@ To see a list of all keys, use the keyset() function:
 
 SELECT keyset() from VegaError SINCE 24 HOURS AGO
 
-We will document these in a future release.
-
 ## Development
 
 Running the agent alongside a Vega app is helpful for a quicker feedback loop. You can use the example app we've provided in the repo, or generate a new Vega app.
 
 ### Example App
 
-The `examples` folder contains sample applications that can be built just like any Kepler app. The [Sample app](./examples/KeplerProject) is pre-configured to work with the agent source code. The steps are outlined below.
+The `examples` folder contains sample applications that can be built just like any Vega app. The [Sample app](./examples/KeplerProject) is pre-configured to work with the agent source code. The steps are outlined below.
 
 1. Install deps and run the agent in dev mode
 
