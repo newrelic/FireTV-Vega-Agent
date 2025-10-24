@@ -1,7 +1,7 @@
 {
-  "name": "newrelic-kepler-agent",
-  "version": "0.8.1",
-  "description": "A New Relic Agent for Kepler",
+  "name": "newrelic-vega-agent",
+  "version": "0.0.1-beta",
+  "description": "A New Relic Agent for Amazon Vega applications (Beta)",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
@@ -17,11 +17,12 @@
     "lint:fix": "eslint ./**/*.js --fix",
     "docs:generate": "jsdoc -c jsdoc.json",
     "commit": "cz",
-    "build:plugin": "rimraf plugin/build && tsc --build plugin"
+    "build:plugin": "rimraf plugin/build && tsc --build plugin",
+    "third-party-updates": "oss third-party manifest --includeOptDeps && oss third-party notices --includeOptDeps && git add THIRD_PARTY_NOTICES.md third_party_manifest.json"
   },
   "files": [
     "dist",
-    "LICENSE",
+    "LICENSE.txt",
     "README.md",
     "CHANGELOG.md",
     "THIRD_PARTY_NOTICES.md"
@@ -45,11 +46,15 @@
   },
   "keywords": [
     "new relic",
-    "kepler"
+    "kepler",
+    "firetv",
+    "monitoring",
+    "analytics",
+    "beta"
   ],
   "author": "New Relic",
   "license": "Apache-2.0",
-  "homepage": "https://github.com/newrelic-experimental/newrelic-kepler-agent",
+  "homepage": "https://github.com/newrelic/FireTV-Vega-Agent",
   "dependencies": {
     "@amazon-devices/react-native-device-info": "^2.0.0",
     "@amazon-devices/react-native-kepler": "~2.0.0",
@@ -61,6 +66,7 @@
     "@babel/core": "^7.16.7",
     "@babel/plugin-proposal-class-properties": "^7.16.7",
     "@babel/preset-env": "^7.16.7",
+    "@newrelic/newrelic-oss-cli": "^0.1.2",
     "@types/jest": "^29.5.12",
     "@types/node": "^18.11.18",
     "@types/pako": "^2.0.3",

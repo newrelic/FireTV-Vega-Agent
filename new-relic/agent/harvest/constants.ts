@@ -1,7 +1,7 @@
-/** Kepler Agent default eventType */
-export const SYSTEM_EVENT_TYPE = "KeplerSystem"
-export const ERROR_EVENT_TYPE = "KeplerError"
-export const BREADCRUMB_EVENT_TYPE = "KeplerBreadcrumb"
+/** Vega Agent default eventType */
+export const SYSTEM_EVENT_TYPE = "VegaSystem"
+export const ERROR_EVENT_TYPE = "VegaError"
+export const BREADCRUMB_EVENT_TYPE = "VegaBreadcrumb"
 
 /** Default harvest time in seconds (2 minutes) */
 export const DEFAULT_HARVEST_TIME = 120

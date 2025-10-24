@@ -1,46 +1,31 @@
-/*
- * Copyright (c) 2022 Amazon.com, Inc. or its affiliates.  All rights reserved.
- *
- * PROPRIETARY/CONFIDENTIAL.  USE IS SUBJECT TO LICENSE TERMS.
- */
-
-import React, {useState} from 'react';
-import {StyleSheet, Text, ImageBackground, View, Image} from 'react-native';
+import React from 'react';
+import {StyleSheet, ImageBackground, View} from 'react-native';
 import {Link} from './components/Link';
-import NewRelicAgent from 'newrelic-kepler-agent'
-
-const images = {
-  kepler: require('./assets/kepler.png'),
-  learn: require('./assets/learn.png'),
-  support: require('./assets/support.png'),
-  build: require('./assets/build.png'),
-};
+import NewRelicVegaAgent from 'newrelic-vega-agent';
 
 export const App = () => {
-  const [image, setImage] = useState(images.kepler);
-  let lastTime = 0;
 
   const styles = getStyles();
 
-  return(
-      <ImageBackground
+  return (
+    <ImageBackground
       source={require('./assets/background.png')}
       style={styles.background}>
-    <View style={styles.background}>
-      <Link
-            linkText={'Fetch'}
-            onPress={() => {
-              fetch("https://api.ipify.org?format=json")
-                .then((response) => response.json())
-                .then((data) => {
-                  console.log("ApiFy response = ", data);
-                })
-                .catch((error) => {
-                  console.log("ApiFy response error = ", error);
-                });
-            }}
+      <View style={styles.background}>
+        <Link
+          linkText={'Fetch API'}
+          onPress={() => {
+            fetch('https://api.ipify.org?format=json')
+              .then((response) => response.json())
+              .then((data) => {
+                console.log('ApiFy response = ', data);
+              })
+              .catch((error) => {
+                console.log('ApiFy response error = ', error);
+              });
+          }}
         />
-      <Link
+         <Link
             linkText={'Fetch error'}
             onPress={() => {
               fetch("https://api.ipify-x.org?format=json")
@@ -53,27 +38,30 @@ export const App = () => {
                 });
             }}
         />
-      <Link
-            linkText={'Throw JS error'}
-            onPress={() => {
-              new Promise((resolve, reject) => {
-                reject(new Error('Unhandled promise rejection!'))
-              })
-            }}
+        <Link
+          linkText={'Trigger Error'}
+          onPress={() => {
+            new Promise((resolve, reject) => {
+              reject(new Error('Unhandled promise rejection!'));
+            });
+          }}
         />
-      <Link
-            linkText={'Harvest Now'}
-            onPress={() => {
-              NewRelicAgent.harvestNow()
-            }}
+        <Link
+          linkText={'Harvest Now'}
+          onPress={() => {
+            NewRelicVegaAgent.harvestNow();
+          }}
         />
-      <Link
-            linkText={'Record custom event'}
-            onPress= {() => {
-              NewRelicAgent.recordCustomEvent("KeplerMyEvent", {"one": 1, "name": "Joe"});
-            }}
+        <Link
+          linkText={'Record Custom Event'}
+          onPress={() => {
+            NewRelicVegaAgent.recordCustomEvent('VegaMyEvent', {
+              one: 1,
+              name: 'Joe',
+            });
+          }}
         />
-    </View>
+      </View>
     </ImageBackground>
   );
 };

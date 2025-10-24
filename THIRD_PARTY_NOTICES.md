@@ -1,6 +1,6 @@
 # Third Party Notices
 
-The newrelic-kepler-agent uses source code from third party libraries which carry
+The firetv-vega-agent uses source code from third party libraries which carry
 their own copyright notices and license terms. These notices are provided
 below.
 
