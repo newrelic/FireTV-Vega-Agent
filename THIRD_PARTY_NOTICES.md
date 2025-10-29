@@ -8,7 +8,7 @@ In the event that a required notice is missing or incorrect, please notify us
 by e-mailing [open-source@newrelic.com](mailto:open-source@newrelic.com).
 
 For any licenses that require the disclosure of source
-code, the source code can be found at [https://github.com/newrelic-experimental/newrelic-kepler-agent](https://github.com/newrelic-experimental/newrelic-kepler-agent).
+code, the source code can be found at [https://github.com/newrelic/FireTV-Vega-Agent](https://github.com/newrelic/FireTV-Vega-Agent).
 
 ## Content
 
