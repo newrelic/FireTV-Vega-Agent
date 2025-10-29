@@ -1,7 +1,7 @@
 {
   "lastUpdated": "Mon May 13 2024 12:42:49 GMT-0400 (Eastern Daylight Time)",
   "projectName": "firetv-vega-agent",
-  "projectUrl": "https://github.com/newrelic-experimental/newrelic-kepler-agent",
+  "projectUrl": "https://github.com/newrelic/FireTV-Vega-Agent",
   "includeOptDeps": false,
   "includeDev": true,
   "dependencies": {

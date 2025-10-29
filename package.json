@@ -17,8 +17,7 @@
     "lint:fix": "eslint ./**/*.js --fix",
     "docs:generate": "jsdoc -c jsdoc.json",
     "commit": "cz",
-    "build:plugin": "rimraf plugin/build && tsc --build plugin",
-    "third-party-updates": "oss third-party manifest --includeOptDeps && oss third-party notices --includeOptDeps && git add THIRD_PARTY_NOTICES.md third_party_manifest.json"
+    "build:plugin": "rimraf plugin/build && tsc --build plugin"
   },
   "files": [
     "dist",
@@ -66,7 +65,6 @@
     "@babel/core": "^7.16.7",
     "@babel/plugin-proposal-class-properties": "^7.16.7",
     "@babel/preset-env": "^7.16.7",
-    "@newrelic/newrelic-oss-cli": "^0.1.2",
     "@types/jest": "^29.5.12",
     "@types/node": "^18.11.18",
     "@types/pako": "^2.0.3",
@@ -75,7 +73,7 @@
     "aws-sdk": "^2.1048.0",
     "babel-eslint": "^8.2.6",
     "babel-jest": "^29.7.0",
-    "commitizen": "^4.2.4",
+    "commitizen": "^4.3.1",
     "cz-conventional-changelog": "^3.3.0",
     "docdash": "^1.2.0",
     "edit-json-file": "^1.7.0",
@@ -101,6 +99,5 @@
   },
   "resolutions": {
     "@types/react": "^19.2.0"
-  },
-  "overrides": {}
+  }
 }
