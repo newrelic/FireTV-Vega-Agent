@@ -8,7 +8,9 @@ export enum NrEndpoint {
     /// Endpoint for US-based accounts.
     US,
     /// Endpoint for EU-based accounts.
-    EU
+    EU,
+    /// Endpoint for Japan-based accounts.
+    JP,
 }
 
 /** Function to build the endpoint URL */
