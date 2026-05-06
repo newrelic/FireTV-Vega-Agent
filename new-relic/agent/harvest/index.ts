@@ -32,6 +32,8 @@ export class NrHarvest {
             (endpoint, accountId) => {
                 if (endpoint == NrEndpoint.US) {
                     return `https://insights-collector.newrelic.com/v1/accounts/${accountId}/events`
+                } else if (endpoint == NrEndpoint.JP) {
+                    return `https://insights-collector.jp.nr-data.net/v1/accounts/${accountId}/events`
                 } else {
                     return `https://insights-collector.eu01.nr-data.net/v1/accounts/${accountId}/events`
                 }
@@ -48,6 +50,8 @@ export class NrHarvest {
             (endpoint, _) => {
                 if (endpoint == NrEndpoint.US) {
                     return "https://log-api.newrelic.com/log/v1"
+                } else if (endpoint == NrEndpoint.JP) {
+                    return "https://log-api.jp.newrelic.com/log/v1"
                 } else {
                     return "https://log-api.eu.newrelic.com/log/v1"
                 }
@@ -64,6 +68,8 @@ export class NrHarvest {
             (endpoint, _) => {
                 if (endpoint == NrEndpoint.US) {
                     return "https://metric-api.newrelic.com/metric/v1"
+                } else if (endpoint == NrEndpoint.JP) {
+                    return "https://metric-api.jp.newrelic.com/metric/v1"
                 } else {
                     return "https://metric-api.eu.newrelic.com/metric/v1"
                 }
