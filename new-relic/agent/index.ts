@@ -16,7 +16,7 @@ export class NrAgent {
      * @param endpoint New Relic endpoint ("US" or "EU"). If invalid, default is "US".
      */
     constructor(apiKey: string, accountId: string, endpoint: string) {
-        let nrEndpoint = endpoint == "EU" ? NrEndpoint.EU : NrEndpoint.US
+        let nrEndpoint = endpoint == "EU" ? NrEndpoint.EU : endpoint == "JP" ? NrEndpoint.JP : NrEndpoint.US
         this.agentSession = this.genRandomId()
         this.nrHarvest = new NrHarvest(apiKey, accountId, nrEndpoint)
         this.setAttribute("agentSession", this.agentSession)
