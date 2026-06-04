@@ -1,6 +1,6 @@
 {
   "name": "newrelic-vega-agent",
-  "version": "0.0.1-beta",
+  "version": "0.0.2-beta",
   "description": "A New Relic Agent for Amazon Vega applications (Beta)",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
