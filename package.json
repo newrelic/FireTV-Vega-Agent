@@ -69,7 +69,6 @@
     "@babel/core": "^7.16.7",
     "@babel/plugin-proposal-class-properties": "^7.16.7",
     "@babel/preset-env": "^7.16.7",
-    "@newrelic/newrelic-oss-cli": "^0.1.2",
     "@types/jest": "^29.5.12",
     "@types/node": "^18.11.18",
     "@types/pako": "^2.0.3",
