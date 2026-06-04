@@ -51,6 +51,10 @@
     "analytics",
     "beta"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/newrelic/FireTV-Vega-Agent.git"
+  },
   "author": "New Relic",
   "license": "Apache-2.0",
   "homepage": "https://github.com/newrelic/FireTV-Vega-Agent",
@@ -65,12 +69,12 @@
     "@babel/core": "^7.16.7",
     "@babel/plugin-proposal-class-properties": "^7.16.7",
     "@babel/preset-env": "^7.16.7",
+    "@newrelic/newrelic-oss-cli": "^0.1.2",
     "@types/jest": "^29.5.12",
     "@types/node": "^18.11.18",
     "@types/pako": "^2.0.3",
     "@types/react": "^19.2.0",
     "ansi-regex": ">=5.0.1",
-    "aws-sdk": "^2.1048.0",
     "babel-eslint": "^8.2.6",
     "babel-jest": "^29.7.0",
     "commitizen": "^4.3.1",

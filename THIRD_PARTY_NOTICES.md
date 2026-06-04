@@ -14,8 +14,8 @@ code, the source code can be found at [https://github.com/newrelic/FireTV-Vega-A
 
 **[dependencies](#dependencies)**
 
-* [@amazon-devices/react-native-device-info](#amznreact-native-device-info)
-* [@amazon-devices/react-native-kepler](#amznreact-native-kepler)
+* [@amazon-devices/react-native-device-info](#amazon-devicesreact-native-device-info)
+* [@amazon-devices/react-native-kepler](#amazon-devicesreact-native-kepler)
 * [@expo/config-plugins](#expoconfig-plugins)
 * [pako](#pako)
 * [react-native-promise-rejection-utils](#react-native-promise-rejection-utils)
@@ -25,12 +25,12 @@ code, the source code can be found at [https://github.com/newrelic/FireTV-Vega-A
 * [@babel/core](#babelcore)
 * [@babel/plugin-proposal-class-properties](#babelplugin-proposal-class-properties)
 * [@babel/preset-env](#babelpreset-env)
+* [@newrelic/newrelic-oss-cli](#newrelicnewrelic-oss-cli)
 * [@types/jest](#typesjest)
 * [@types/node](#typesnode)
 * [@types/pako](#typespako)
 * [@types/react](#typesreact)
 * [ansi-regex](#ansi-regex)
-* [aws-sdk](#aws-sdk)
 * [babel-eslint](#babel-eslint)
 * [babel-jest](#babel-jest)
 * [commitizen](#commitizen)
@@ -52,70 +52,45 @@ code, the source code can be found at [https://github.com/newrelic/FireTV-Vega-A
 * [typescript](#typescript)
 * [unzipper](#unzipper)
 
+**[optionalDependencies](#optionalDependencies)**
+
+
 
 ## dependencies
 
 ### @amazon-devices/react-native-device-info
 
-This product includes source derived from [@amazon-devices/react-native-device-info](https://github.com/react-native-device-info/react-native-device-info) ([v2.0.1712900936](https://github.com/react-native-device-info/react-native-device-info/tree/v2.0.1712900936)), distributed under the [MIT License](https://github.com/react-native-device-info/react-native-device-info/blob/v2.0.1712900936/LICENSE):
+This product includes source derived from [@amazon-devices/react-native-device-info](https://github.com/react-native-device-info/react-native-device-info) ([v2.0.1758683737](https://github.com/react-native-device-info/react-native-device-info/tree/v2.0.1758683737)), distributed under the [Custom: https://badge.fury.io/js/react-native-device-info.svg License](https://github.com/react-native-device-info/react-native-device-info/blob/v2.0.1758683737/LICENSE):
 
 ```
-The MIT License (MIT)
+Copyright 2025 Amazon.com, Inc. or its affiliates.  All rights reserved.
 
-Copyright (c) 2015 Rebecca Hughes
+These materials are licensed as "Program Materials" under the Program Materials License Agreement (the "Agreement").  The Agreement is available at https://developer.amazon.com/support/legal/pml.  See the Agreement for the specific terms and conditions of the Agreement.  Capitalized terms not defined in this file have the meanings given to them in the Agreement.  
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+If you do not agree to the above terms and conditions, you may not use any file in this package. 
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+YOUR USE OF THE PROGRAM MATERIALS IN OR ASSOCIATED WITH THIS PACKAGE IS AT YOUR SOLE RISK.  IN NO EVENT WILL AMAZON BE LIABLE FOR ANY DAMAGES, INCLUDING WITHOUT LIMITATION ANY DIRECT, INDIRECT, CONSEQUENTIAL, SPECIAL, INCIDENTAL, OR PUNITIVE DAMAGES (INCLUDING FOR ANY LOSS OF GOODWILL, BUSINESS INTERRUPTION, LOST PROFITS OR DATA, OR COMPUTER FAILURE OR MALFUNCTION) ARISING FROM OR RELATING TO SUCH PROGRAM MATERIALS, HOWEVER CAUSED AND REGARDLESS OF THE THEORY OF LIABILITY, EVEN IF AMAZON HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.  THESE LIMITATIONS AND DISCLAIMERS APPLY EXCEPT TO THE EXTENT PROHIBITED BY APPLICABLE LAW.
 
 ```
 
 ### @amazon-devices/react-native-kepler
 
-This product includes source derived from [@amazon-devices/react-native-kepler](undefined) ([v2.0.1712900936](undefined/tree/v2.0.1712900936)), distributed under the [MIT License](undefined/blob/v2.0.1712900936/LICENSE):
+This product includes source derived from [@amazon-devices/react-native-kepler](https://developer.amazon.com/docs/react-native-vega) ([v2.0.1758683737](https://developer.amazon.com/docs/react-native-vega/tree/v2.0.1758683737)), distributed under the [UNKNOWN License](https://developer.amazon.com/docs/react-native-vega/blob/v2.0.1758683737/LICENSE):
 
 ```
-MIT License
+Copyright 2025 Amazon.com, Inc. or its affiliates.  All rights reserved.
 
-Copyright (c) Meta Platforms, Inc. and affiliates.
+These materials are licensed as "Program Materials" under the Program Materials License Agreement (the "Agreement").  The Agreement is available at https://developer.amazon.com/support/legal/pml.  See the Agreement for the specific terms and conditions of the Agreement.  Capitalized terms not defined in this file have the meanings given to them in the Agreement.  
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+If you do not agree to the above terms and conditions, you may not use any file in this package. 
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+YOUR USE OF THE PROGRAM MATERIALS IN OR ASSOCIATED WITH THIS PACKAGE IS AT YOUR SOLE RISK.  IN NO EVENT WILL AMAZON BE LIABLE FOR ANY DAMAGES, INCLUDING WITHOUT LIMITATION ANY DIRECT, INDIRECT, CONSEQUENTIAL, SPECIAL, INCIDENTAL, OR PUNITIVE DAMAGES (INCLUDING FOR ANY LOSS OF GOODWILL, BUSINESS INTERRUPTION, LOST PROFITS OR DATA, OR COMPUTER FAILURE OR MALFUNCTION) ARISING FROM OR RELATING TO SUCH PROGRAM MATERIALS, HOWEVER CAUSED AND REGARDLESS OF THE THEORY OF LIABILITY, EVEN IF AMAZON HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.  THESE LIMITATIONS AND DISCLAIMERS APPLY EXCEPT TO THE EXTENT PROHIBITED BY APPLICABLE LAW.
 
 ```
 
 ### @expo/config-plugins
 
-This product includes source derived from [@expo/config-plugins](https://github.com/expo/expo) ([v7.9.1](https://github.com/expo/expo/tree/v7.9.1)), distributed under the [MIT License](https://github.com/expo/expo/blob/v7.9.1/LICENSE):
+This product includes source derived from [@expo/config-plugins](https://github.com/expo/expo) ([v7.9.2](https://github.com/expo/expo/tree/v7.9.2)), distributed under the [MIT License](https://github.com/expo/expo/blob/v7.9.2/LICENSE):
 
 ```
 The MIT License (MIT)
@@ -194,7 +169,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ### @babel/core
 
-This product includes source derived from [@babel/core](https://github.com/babel/babel) ([v7.24.5](https://github.com/babel/babel/tree/v7.24.5)), distributed under the [MIT License](https://github.com/babel/babel/blob/v7.24.5/LICENSE):
+This product includes source derived from [@babel/core](https://github.com/babel/babel) ([v7.28.5](https://github.com/babel/babel/tree/v7.28.5)), distributed under the [MIT License](https://github.com/babel/babel/blob/v7.28.5/LICENSE):
 
 ```
 MIT License
@@ -254,7 +229,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ### @babel/preset-env
 
-This product includes source derived from [@babel/preset-env](https://github.com/babel/babel) ([v7.24.5](https://github.com/babel/babel/tree/v7.24.5)), distributed under the [MIT License](https://github.com/babel/babel/blob/v7.24.5/LICENSE):
+This product includes source derived from [@babel/preset-env](https://github.com/babel/babel) ([v7.28.5](https://github.com/babel/babel/tree/v7.28.5)), distributed under the [MIT License](https://github.com/babel/babel/blob/v7.28.5/LICENSE):
 
 ```
 MIT License
@@ -282,145 +257,11 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ```
 
-### @types/jest
+### @newrelic/newrelic-oss-cli
 
-This product includes source derived from [@types/jest](https://github.com/DefinitelyTyped/DefinitelyTyped) ([v29.5.12](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/v29.5.12)), distributed under the [MIT License](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/v29.5.12/LICENSE):
-
-```
-    MIT License
-
-    Copyright (c) Microsoft Corporation.
-
-    Permission is hereby granted, free of charge, to any person obtaining a copy
-    of this software and associated documentation files (the "Software"), to deal
-    in the Software without restriction, including without limitation the rights
-    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-    copies of the Software, and to permit persons to whom the Software is
-    furnished to do so, subject to the following conditions:
-
-    The above copyright notice and this permission notice shall be included in all
-    copies or substantial portions of the Software.
-
-    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-    SOFTWARE
+This product includes source derived from [@newrelic/newrelic-oss-cli](https://github.com/newrelic/newrelic-oss-cli) ([v0.1.2](https://github.com/newrelic/newrelic-oss-cli/tree/v0.1.2)), distributed under the [Apache-2.0 License](https://github.com/newrelic/newrelic-oss-cli/blob/v0.1.2/LICENSE):
 
 ```
-
-### @types/node
-
-This product includes source derived from [@types/node](https://github.com/DefinitelyTyped/DefinitelyTyped) ([v18.19.31](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/v18.19.31)), distributed under the [MIT License](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/v18.19.31/LICENSE):
-
-```
-    MIT License
-
-    Copyright (c) Microsoft Corporation.
-
-    Permission is hereby granted, free of charge, to any person obtaining a copy
-    of this software and associated documentation files (the "Software"), to deal
-    in the Software without restriction, including without limitation the rights
-    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-    copies of the Software, and to permit persons to whom the Software is
-    furnished to do so, subject to the following conditions:
-
-    The above copyright notice and this permission notice shall be included in all
-    copies or substantial portions of the Software.
-
-    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-    SOFTWARE
-
-```
-
-### @types/pako
-
-This product includes source derived from [@types/pako](https://github.com/DefinitelyTyped/DefinitelyTyped) ([v2.0.3](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/v2.0.3)), distributed under the [MIT License](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/v2.0.3/LICENSE):
-
-```
-    MIT License
-
-    Copyright (c) Microsoft Corporation.
-
-    Permission is hereby granted, free of charge, to any person obtaining a copy
-    of this software and associated documentation files (the "Software"), to deal
-    in the Software without restriction, including without limitation the rights
-    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-    copies of the Software, and to permit persons to whom the Software is
-    furnished to do so, subject to the following conditions:
-
-    The above copyright notice and this permission notice shall be included in all
-    copies or substantial portions of the Software.
-
-    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-    SOFTWARE
-
-```
-
-### @types/react
-
-This product includes source derived from [@types/react](https://github.com/DefinitelyTyped/DefinitelyTyped) ([v18.3.1](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/v18.3.1)), distributed under the [MIT License](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/v18.3.1/LICENSE):
-
-```
-    MIT License
-
-    Copyright (c) Microsoft Corporation.
-
-    Permission is hereby granted, free of charge, to any person obtaining a copy
-    of this software and associated documentation files (the "Software"), to deal
-    in the Software without restriction, including without limitation the rights
-    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-    copies of the Software, and to permit persons to whom the Software is
-    furnished to do so, subject to the following conditions:
-
-    The above copyright notice and this permission notice shall be included in all
-    copies or substantial portions of the Software.
-
-    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-    SOFTWARE
-
-```
-
-### ansi-regex
-
-This product includes source derived from [ansi-regex](https://github.com/chalk/ansi-regex) ([v6.0.1](https://github.com/chalk/ansi-regex/tree/v6.0.1)), distributed under the [MIT License](https://github.com/chalk/ansi-regex/blob/v6.0.1/license):
-
-```
-MIT License
-
-Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-```
-
-### aws-sdk
-
-This product includes source derived from [aws-sdk](https://github.com/aws/aws-sdk-js) ([v2.1609.0](https://github.com/aws/aws-sdk-js/tree/v2.1609.0)), distributed under the [Apache-2.0 License](https://github.com/aws/aws-sdk-js/blob/v2.1609.0/LICENSE.txt):
-
-```
-
                                  Apache License
                            Version 2.0, January 2004
                         http://www.apache.org/licenses/
@@ -609,7 +450,7 @@ This product includes source derived from [aws-sdk](https://github.com/aws/aws-s
       same "printed page" as the copyright notice for easier
       identification within third-party archives.
 
-   Copyright 2012-2017 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+   Copyright [yyyy] [name of copyright owner]
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -622,6 +463,138 @@ This product includes source derived from [aws-sdk](https://github.com/aws/aws-s
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
+```
+
+### @types/jest
+
+This product includes source derived from [@types/jest](https://github.com/DefinitelyTyped/DefinitelyTyped) ([v29.5.14](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/v29.5.14)), distributed under the [MIT License](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/v29.5.14/LICENSE):
+
+```
+    MIT License
+
+    Copyright (c) Microsoft Corporation.
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE
+
+```
+
+### @types/node
+
+This product includes source derived from [@types/node](https://github.com/DefinitelyTyped/DefinitelyTyped) ([v18.19.130](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/v18.19.130)), distributed under the [MIT License](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/v18.19.130/LICENSE):
+
+```
+    MIT License
+
+    Copyright (c) Microsoft Corporation.
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE
+
+```
+
+### @types/pako
+
+This product includes source derived from [@types/pako](https://github.com/DefinitelyTyped/DefinitelyTyped) ([v2.0.4](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/v2.0.4)), distributed under the [MIT License](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/v2.0.4/LICENSE):
+
+```
+    MIT License
+
+    Copyright (c) Microsoft Corporation.
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE
+
+```
+
+### @types/react
+
+This product includes source derived from [@types/react](https://github.com/DefinitelyTyped/DefinitelyTyped) ([v19.2.2](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/v19.2.2)), distributed under the [MIT License](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/v19.2.2/LICENSE):
+
+```
+    MIT License
+
+    Copyright (c) Microsoft Corporation.
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE
+
+```
+
+### ansi-regex
+
+This product includes source derived from [ansi-regex](https://github.com/chalk/ansi-regex) ([v6.2.2](https://github.com/chalk/ansi-regex/tree/v6.2.2)), distributed under the [MIT License](https://github.com/chalk/ansi-regex/blob/v6.2.2/license):
+
+```
+MIT License
+
+Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ```
 
@@ -686,7 +659,7 @@ SOFTWARE.
 
 ### commitizen
 
-This product includes source derived from [commitizen](https://github.com/commitizen/cz-cli) ([v4.3.0](https://github.com/commitizen/cz-cli/tree/v4.3.0)), distributed under the [MIT License](https://github.com/commitizen/cz-cli/blob/v4.3.0/LICENSE):
+This product includes source derived from [commitizen](https://github.com/commitizen/cz-cli) ([v4.3.1](https://github.com/commitizen/cz-cli/tree/v4.3.1)), distributed under the [MIT License](https://github.com/commitizen/cz-cli/blob/v4.3.1/LICENSE):
 
 ```
 The MIT License (MIT)
@@ -810,12 +783,12 @@ https://github.com/jsdoc3/jsdoc
 
 ### edit-json-file
 
-This product includes source derived from [edit-json-file](https://github.com/IonicaBizau/edit-json-file) ([v1.8.0](https://github.com/IonicaBizau/edit-json-file/tree/v1.8.0)), distributed under the [MIT License](https://github.com/IonicaBizau/edit-json-file/blob/v1.8.0/LICENSE):
+This product includes source derived from [edit-json-file](https://github.com/IonicaBizau/edit-json-file) ([v1.8.1](https://github.com/IonicaBizau/edit-json-file/tree/v1.8.1)), distributed under the [MIT License](https://github.com/IonicaBizau/edit-json-file/blob/v1.8.1/LICENSE):
 
 ```
 The MIT License (MIT)
 
-Copyright (c) 2015-24 Ionică Bizău <bizauionica@gmail.com> (https://ionicabizau.net)
+Copyright (c) 2015-25 Ionică Bizău <bizauionica@gmail.com> (https://ionicabizau.net)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -868,7 +841,7 @@ SOFTWARE.
 
 ### eslint-plugin-import
 
-This product includes source derived from [eslint-plugin-import](https://github.com/import-js/eslint-plugin-import) ([v2.29.1](https://github.com/import-js/eslint-plugin-import/tree/v2.29.1)), distributed under the [MIT License](https://github.com/import-js/eslint-plugin-import/blob/v2.29.1/LICENSE):
+This product includes source derived from [eslint-plugin-import](https://github.com/import-js/eslint-plugin-import) ([v2.32.0](https://github.com/import-js/eslint-plugin-import/tree/v2.32.0)), distributed under the [MIT License](https://github.com/import-js/eslint-plugin-import/blob/v2.32.0/LICENSE):
 
 ```
 The MIT License (MIT)
@@ -898,7 +871,7 @@ SOFTWARE.
 
 ### eslint-plugin-jsx-a11y
 
-This product includes source derived from [eslint-plugin-jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y) ([v6.8.0](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/v6.8.0)), distributed under the [MIT License](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/v6.8.0/LICENSE.md):
+This product includes source derived from [eslint-plugin-jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y) ([v6.10.2](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/v6.10.2)), distributed under the [MIT License](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/v6.10.2/LICENSE.md):
 
 ```
 The MIT License (MIT)
@@ -914,7 +887,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ### eslint-plugin-react
 
-This product includes source derived from [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) ([v7.34.1](https://github.com/jsx-eslint/eslint-plugin-react/tree/v7.34.1)), distributed under the [MIT License](https://github.com/jsx-eslint/eslint-plugin-react/blob/v7.34.1/LICENSE):
+This product includes source derived from [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) ([v7.37.5](https://github.com/jsx-eslint/eslint-plugin-react/tree/v7.37.5)), distributed under the [MIT License](https://github.com/jsx-eslint/eslint-plugin-react/blob/v7.37.5/LICENSE):
 
 ```
 The MIT License (MIT)
@@ -944,7 +917,7 @@ SOFTWARE.
 
 ### eslint
 
-This product includes source derived from [eslint](https://github.com/eslint/eslint) ([v8.57.0](https://github.com/eslint/eslint/tree/v8.57.0)), distributed under the [MIT License](https://github.com/eslint/eslint/blob/v8.57.0/LICENSE):
+This product includes source derived from [eslint](https://github.com/eslint/eslint) ([v8.57.1](https://github.com/eslint/eslint/tree/v8.57.1)), distributed under the [MIT License](https://github.com/eslint/eslint/blob/v8.57.1/LICENSE):
 
 ```
 Copyright OpenJS Foundation and other contributors, <www.openjsf.org>
@@ -1000,7 +973,7 @@ SOFTWARE.
 
 ### jsdoc
 
-This product includes source derived from [jsdoc](https://github.com/jsdoc/jsdoc) ([v4.0.2](https://github.com/jsdoc/jsdoc/tree/v4.0.2)), distributed under the [Apache-2.0 License](https://github.com/jsdoc/jsdoc/blob/v4.0.2/LICENSE.md):
+This product includes source derived from [jsdoc](https://github.com/jsdoc/jsdoc) ([v4.0.5](https://github.com/jsdoc/jsdoc/tree/v4.0.5)), distributed under the [Apache-2.0 License](https://github.com/jsdoc/jsdoc/blob/v4.0.5/LICENSE.md):
 
 ```
 # License
@@ -1110,7 +1083,7 @@ https://github.com/jmblog/color-themes-for-google-code-prettify
 
 ### markdown-it
 
-This product includes source derived from [markdown-it](https://github.com/markdown-it/markdown-it) ([v14.1.0](https://github.com/markdown-it/markdown-it/tree/v14.1.0)), distributed under the [MIT License](https://github.com/markdown-it/markdown-it/blob/v14.1.0/LICENSE):
+This product includes source derived from [markdown-it](https://github.com/markdown-it/markdown-it) ([v14.2.0](https://github.com/markdown-it/markdown-it/tree/v14.2.0)), distributed under the [MIT License](https://github.com/markdown-it/markdown-it/blob/v14.2.0/LICENSE):
 
 ```
 Copyright (c) 2014 Vitaly Puzrin, Alex Kocharin.
@@ -1140,7 +1113,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 ### marked
 
-This product includes source derived from [marked](https://github.com/markedjs/marked) ([v12.0.2](https://github.com/markedjs/marked/tree/v12.0.2)), distributed under the [MIT License](https://github.com/markedjs/marked/blob/v12.0.2/LICENSE.md):
+This product includes source derived from [marked](https://github.com/markedjs/marked) ([v16.4.1](https://github.com/markedjs/marked/tree/v16.4.1)), distributed under the [MIT License](https://github.com/markedjs/marked/blob/v16.4.1/LICENSE.md):
 
 ```
 # License information
@@ -1255,12 +1228,12 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ### ts-jest
 
-This product includes source derived from [ts-jest](https://github.com/kulshekhar/ts-jest) ([v29.1.2](https://github.com/kulshekhar/ts-jest/tree/v29.1.2)), distributed under the [MIT License](https://github.com/kulshekhar/ts-jest/blob/v29.1.2/LICENSE.md):
+This product includes source derived from [ts-jest](https://github.com/kulshekhar/ts-jest) ([v29.4.11](https://github.com/kulshekhar/ts-jest/tree/v29.4.11)), distributed under the [MIT License](https://github.com/kulshekhar/ts-jest/blob/v29.4.11/LICENSE.md):
 
 ```
 MIT License
 
-Copyright (c) 2016-2018
+Copyright (c) 2016-2025
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -1376,4 +1349,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 Commits in this fork are (c) Ziggy Jonsson (ziggy.jonsson.nyc@gmail.com)
 and fall under same licence structure as the original repo (MIT)
 ```
+
+
+## optionalDependencies
 
