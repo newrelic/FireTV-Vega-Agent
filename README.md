@@ -225,7 +225,11 @@ The app will open a simple interface in QEMU that can be used to simulate comman
 
 ## Support
 
-For general help and support, please contact New Relic Account Team.
+For support and questions:
+- Visit the [New Relic Explorers Hub](https://support.newrelic.com/s/)
+- File issues on the [project's GitHub repository](https://github.com/newrelic/FireTV-Vega-Agent/issues)
+- Contact New Relic support through your account
+
 
 ## Privacy
 

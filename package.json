@@ -1,6 +1,6 @@
 {
   "name": "newrelic-vega-agent",
-  "version": "0.0.1-beta",
+  "version": "0.0.2-beta",
   "description": "A New Relic Agent for Amazon Vega applications (Beta)",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -51,6 +51,10 @@
     "analytics",
     "beta"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/newrelic/FireTV-Vega-Agent.git"
+  },
   "author": "New Relic",
   "license": "Apache-2.0",
   "homepage": "https://github.com/newrelic/FireTV-Vega-Agent",
@@ -70,7 +74,6 @@
     "@types/pako": "^2.0.3",
     "@types/react": "^19.2.0",
     "ansi-regex": ">=5.0.1",
-    "aws-sdk": "^2.1048.0",
     "babel-eslint": "^8.2.6",
     "babel-jest": "^29.7.0",
     "commitizen": "^4.3.1",
