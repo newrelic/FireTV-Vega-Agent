@@ -69,7 +69,7 @@ let config = {
   recordFetchResults: true,
 };
 
-// Set Account ID, API Key and Endpoint (either "US" or "EU").
+// Set Account ID, API Key and Endpoint (either "US", "EU", or "JP").
 NewRelicVegaAgent.startAgent("<ACCOUNT ID>", "<API KEY>", "<ENDPOINT>", config);
 
 // Optional:
