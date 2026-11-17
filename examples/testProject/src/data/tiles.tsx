@@ -52,18 +52,4 @@ export const tiles: TileData[] = [
     description: 'Records a custom VegaMyEvent event with sample attributes to New Relic.',
     icon: require('../assets/learn-more.png'),
   },
-  {
-    id: 'nr-crash',
-    label: 'Crash\nNow',
-    accessibilityLabel: 'Crash Now',
-    description: 'Triggers a native crash immediately to test New Relic crash reporting. The app will restart and send the crash report.',
-    icon: require('../assets/debug.png'),
-  },
-  {
-    id: 'nr-crash-delayed',
-    label: 'Crash\nin 6s',
-    accessibilityLabel: 'Crash in 6 seconds',
-    description: 'Schedules a native crash in 6 seconds — same as the crash agent sample app auto-crash test.',
-    icon: require('../assets/debug.png'),
-  },
 ];

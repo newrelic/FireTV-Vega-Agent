@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import {StyleSheet, Text, ImageBackground, View} from 'react-native';
 import {TVFocusGuideView} from '@amazon-devices/react-native-kepler';
 import NewRelicVegaAgent from 'newrelic-vega-agent';
-import {NrKeplerCrash} from '@amzn/nrkeplercrash';
 import {Tile} from './components/Tile';
 import {tiles} from './data/tiles';
 
@@ -30,16 +29,6 @@ const nrActions: Record<string, () => void> = {
   'nr-event': () => {
     NewRelicVegaAgent.recordCustomEvent('VegaMyEvent', {one: 1, name: 'Joe'});
     console.log('Custom event recorded');
-  },
-  'nr-crash': () => {
-    console.log('Triggering native crash...');
-    NrKeplerCrash.crashNow(11);
-  },
-  'nr-crash-delayed': () => {
-    console.log('Crash scheduled in 6 seconds...');
-    setTimeout(() => {
-      NrKeplerCrash.crashNow(11);
-    }, 6000);
   },
 };
 
