@@ -4,20 +4,18 @@ import { name as appName } from './app.json';
 import NewRelicVegaAgent from 'newrelic-vega-agent';
 import {NrKeplerCrash} from '@amzn/nrkeplercrash';
 
-NrKeplerCrash.registerHandler("1", "db67dbb78d97df86de772f370ab6ef9caeccNRAL", "US");
-NrKeplerCrash.setSessionId(`session-${Date.now()}`);
-NrKeplerCrash.setCustomAttributes({
-  userId: "user123",
-  environment: "production",
-  feature: "checkout",
-});
-
-NewRelicVegaAgent.startAgent("1", "db67dbb78d97df86de772f370ab6ef9caeccNRAL", "US", {
+let config = {
+  // Capture Javascript errors
   recordJsErrors: true,
+
+  // Capture Promise rejections
   recordPromiseRejections: true,
+
+  // Capture HTTP requests
   recordFetchResults: true,
-  recordConsoleLogs: true,
-});
+};
+
+NewRelicVegaAgent.startAgent("<ACCOUNT ID>", "<API KEY>", "<ENDPOINT>", config);
 
 
 
