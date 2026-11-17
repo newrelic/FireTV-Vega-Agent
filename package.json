@@ -1,6 +1,6 @@
 {
   "name": "newrelic-vega-agent",
-  "version": "0.0.3-beta",
+  "version": "0.0.4-beta",
   "description": "A New Relic Agent for Amazon Vega applications (Beta)",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -28,11 +28,12 @@
   ],
   "jest": {
     "preset": "react-native",
+    "testPathIgnorePatterns": ["/node_modules/", "/examples/"],
     "transform": {
       "^.+\\.jsx?$": "babel-jest"
     },
     "transformIgnorePatterns": [
-      "node_modules/(?!(@?react-native|react-native-promise-rejection-utils)/)"
+      "node_modules/(?!(@?react-native|react-native-promise-rejection-utils|@amazon-devices)/)"
     ],
     "moduleFileExtensions": [
       "ts",
@@ -59,13 +60,21 @@
   "license": "Apache-2.0",
   "homepage": "https://github.com/newrelic/FireTV-Vega-Agent",
   "dependencies": {
-    "@amazon-devices/react-native-device-info": "^2.0.0",
-    "@amazon-devices/react-native-kepler": "~2.0.0",
     "@expo/config-plugins": "^7.2.2",
     "pako": "^2.1.0",
     "react-native-promise-rejection-utils": "0.0.1"
   },
+  "peerDependencies": {
+    "react-native": "*",
+    "@amazon-devices/react-native-kepler": ">=2.0.0",
+    "@amazon-devices/react-native-device-info": ">=2.0.0"
+  },
   "devDependencies": {
+    "@amazon-devices/react-native-kepler": "~4.0.1",
+    "@amazon-devices/react-native-device-info": "~2.1.9000000001",
+    "@react-native/babel-preset": "^0.83.0",
+    "react": "19.2.0",
+    "react-native": "0.83.0",
     "@babel/core": "^7.16.7",
     "@babel/plugin-proposal-class-properties": "^7.16.7",
     "@babel/preset-env": "^7.16.7",

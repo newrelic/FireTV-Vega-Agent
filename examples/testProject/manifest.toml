@@ -1,0 +1,35 @@
+schema-version = 1
+
+[package]
+title = "Basic UI React Native Application for project testproject"
+version = "0.1.0"
+# Floor so local builds pass vpt validate; pass an increasing --build-number for every Appstore upload.
+build-number = 1
+id = "com.amazondeveloper.testproject"
+
+[os.version]
+min = "1.2"
+target = "1.2"
+
+[needs]
+[[needs.module]]
+id = "/com.amazon.vega.os@IVega_1_2"
+
+[[needs.module]]
+id = "/com.amazon.kepler.keplerscript_4@IKeplerScript_0"
+
+[[needs.module]]
+id = "/com.amazon.kepler.kepler_file_system_0@IKeplerFileSystem_0"
+
+
+
+[wants]
+[[wants.module]]
+id = "/com.amazon.kepler.net.net_manager@INetManager"
+
+[components]
+[[components.interactive]]
+id = "com.amazondeveloper.testproject.main"
+runtime-module = "/com.amazon.kepler.runtime.react_native_kepler_4@IReactNativeKepler_0"
+launch-type = "singleton"
+categories = ["com.amazon.category.main"]
