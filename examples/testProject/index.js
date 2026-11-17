@@ -2,7 +2,6 @@ import { AppRegistry, LogBox } from 'react-native';
 import { App } from './src/App';
 import { name as appName } from './app.json';
 import NewRelicVegaAgent from 'newrelic-vega-agent';
-import {NrKeplerCrash} from '@amzn/nrkeplercrash';
 
 let config = {
   // Capture Javascript errors
